@@ -1,0 +1,299 @@
+/* Reset básico */
+body, h1, h2, h3, p, ul, li, form, label {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #ffffff;
+    color: #ffffff;
+    text-align: center;
+}
+
+nav {
+    background-color: #ffffff;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+  
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 90px; /* Ajuste o tamanho da logo conforme necessário */
+    margin-left: 80px;
+}
+
+
+nav .links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+nav .links li {
+    display: inline;
+    margin-right: 20px; /* Espaçamento entre os links */
+}
+
+nav .links li:last-child {
+    margin-right: 0;
+}
+
+nav .links li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 21px;
+}
+
+/*carousel*/
+
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 750px; /* Defina a altura fixa do carrossel */
+}
+
+.carousel-inner {
+    display: flex;
+    width: 100%; /* Ajuste a largura para 100% do contêiner */
+    transition: transform 1.6s ease-in-out;
+}
+
+.carousel-item {
+    width: 100%;
+    flex: 0 0 auto;
+    height: 100%; /* Garante que o item do carrossel preencha a altura do contêiner */
+    display: flex; /* Alinha a imagem centralizada */
+    align-items: center; /* Centraliza verticalmente a imagem */
+    justify-content: center; /* Centraliza horizontalmente a imagem */
+    background: #000; /* Adiciona um fundo para verificar o ajuste */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%; /* Ajusta a altura para preencher o contêiner */
+    object-fit: cover; /* Ajusta a imagem para preencher o contêiner sem distorção */
+}
+
+.additional-image {
+    margin: 0;
+    padding: 0;
+}
+
+.additional-image img {
+    display: block; /* Remove o espaço extra ao redor da imagem */
+    width: 100%;
+    height: auto;
+}
+
+/* lado a lado*/
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Duas colunas para a linha superior */
+    grid-template-rows: auto auto; /* Duas linhas para acomodar as imagens */
+    gap: 0; /* Remove o espaço entre as imagens */
+    justify-items: center; /* Centraliza as imagens na coluna */
+    align-items: center; /* Centraliza as imagens na linha */
+    max-width: 80%; /* Garante que o contêiner não ultrapasse a largura da página */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.photo-grid figure {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimento padrão */
+    display: flex; /* Usado para garantir que a imagem ocupe o espaço total */
+    align-items: center; /* Centraliza a imagem verticalmente */
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    overflow: hidden; /* Garante que a imagem não ultrapasse o contêiner */
+}
+
+.photo-grid img {
+    width: 80%; /* A imagem ocupa toda a largura do contêiner */
+    height: auto; /* Mantém a altura proporcional da imagem */
+    object-fit: contain; /* Ajusta a imagem para caber no contêiner sem distorção */
+}
+
+/* Estilos para o título */
+.text-content h2 {
+    font-size: 24px; /* Tamanho do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    color: #000; /* Cor do título */
+}
+
+
+/*titulo*/
+
+.section-title {
+    text-align: left;
+    margin-bottom: 20px; /* Espaço entre o título e o conteúdo */
+    margin: 30px;
+
+}
+
+.section-title h2 {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 10px; /* Espaço entre o título e a linha */
+}
+
+.section-title hr {
+    width: 99%; /* Largura da linha */
+    height: 2px; /* Altura da linha */
+    background-color: #000000; /* Cor da linha */
+    border: none; /* Remove borda padrão */
+    margin: 0 auto; /* Centraliza a linha */
+}
+
+/*destaques*/
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 80px;
+}
+
+.section-title {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.section-title h2 {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.section-title hr {
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    border: none;
+    margin: 0;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaço entre as linhas de imagens */
+    margin: 0 auto;
+    padding: 0 80px;
+}
+
+.row {
+    display: flex;
+    gap: 20px; /* Reduzindo o espaço entre as imagens na mesma linha */
+    align-items: stretch;
+    position: relative;
+}
+
+.large-image,
+.small-image {
+    position: relative; /* Necessário para que o texto seja posicionado corretamente */
+    flex: 1;
+}
+
+.large-image {
+    flex: 2; /* As imagens maiores ocupam duas vezes o espaço das menores em largura */
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+
+}
+
+.photo-gallery a {
+    display: block;
+    position: relative; /* Permite adicionar texto sobre a imagem */
+    overflow: hidden;
+}
+
+/* Estilo do texto sobre a imagem */
+.photo-gallery a .overlay-text {
+    position: absolute;
+    bottom: 0; 
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o texto */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2; /* Coloca o texto acima da imagem */
+    width: 100%;
+}
+
+.photo-gallery a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent; /* O fundo do texto começa transparente */
+    transition: background-color 0.3s ease; /* Transição suave para o fundo */
+}
+
+.small-image:hover::after,
+.large-image:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente que aparece ao passar o mouse */
+    z-index: 0; /* Coloca o fundo escurecido atrás do texto */
+}
+
+.small-image:hover .text-overlay,
+.large-image:hover .text-overlay {
+    z-index: 1; /
+}
+
+/* Rodapé */
+footer {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 40px;
+}
+
+.redes-sociais img {
+    width: 100px; /* Ajuste o tamanho das imagens conforme necessário */
+    height: 50px;
+}
+/* Responsividade */
+@media (max-width: 600px) {
+    /* Ajusta as colunas dos produtos para uma coluna em telas pequenas */
+    #produtos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Ajusta o carrinho e finalização de compra para ocupar a largura total em telas pequenas */
+    #carrinho, #finalizar-compra {
+        width: 100%;
+    }
+}                          
